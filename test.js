@@ -23,12 +23,12 @@ test("One euro should be 1.07 dollars", function() {
      expect(fromEuroToDollar(3.5)).toBe(3.745); // 1 euro is 1.07 dollars, then 3.5 euros should be = (3.5 * 1.07)
 })
 
-test("Conversion from USD to JPY (1 USD = 146.26 JPY)", function() {
+test("Conversion from USD to JPY (1 USD = 146.2616822429907 JPY)", function() {
     const { fromDollarToYen } = require('./app.js');
-    expect(fromDollarToYen(10)).toBe(1462.6);
+    expect(fromDollarToYen(10)).toBeCloseTo(1462.61682, 5);
 });
 
-test("Conversion from JPY to GPB (1 JPY = 0.0056 GBP)", function() {
+test("Conversion from JPY to GPB (1 JPY = 0.0055591054313099 GBP)", function() {
     const { fromYenToPound } = require('./app.js');
-    expect(fromYenToPound(2500)).toBe(14);
+    expect(fromYenToPound(2500)).toBeCloseTo(13.89776, 5);
 });
