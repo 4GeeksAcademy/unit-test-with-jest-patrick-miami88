@@ -5,7 +5,7 @@ const sum = (a,b) => {
 // Just a console log for ourselves
 console.log(sum(7,3))
 
-let  oneEuroIs = {
+const  oneEuroIs = {
     "JPY": 156.5,
     "USD": 1.07,
     "GBP": 0.87,
